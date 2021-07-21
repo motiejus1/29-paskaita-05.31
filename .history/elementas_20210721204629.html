@@ -85,11 +85,10 @@
     var tr;
     var td;
     
-    td = elementas.atvaizduok("<td ",["stulpelis"], "Stulpelis", "</td>");
-    tr = elementas.atvaizduok("<tr ",["eilute"], td, "</tr>");
-    table = elementas.atvaizduok("<table ",["eilute"], tr, "</table>");
+    td = elementas.atvaizduok("<td ",["stulpelis"], "Stulpelis", "</td>")
+    tr = elementas.atvaizduok("<td ",["stulpelis"], "Stulpelis", "</td>")
     
-    isvedimoElementas.innerHTML += table;
+    
     
     // elementas.paleidimas("<div ",["container", "raudonas", "pradink"], "<p>labas</p><br>", "</div>");
     // console.log(elementas.atvaizduok());
