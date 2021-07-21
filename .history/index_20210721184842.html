@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 paskaita</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kliento-ivedimas">
+        <input />
+        <input/>
+        <input/>
+        <input/>
+        <input/>
+        <input/>
+    </div>
+
+
+    <table class="klientai">
+        <tr>
+            <th>Vardas</th>
+            <th>Pavarde</th>
+            <th>Asmens kodas</th>
+            <th>Prisijungimo data</th>
+            <th>Adresas</th>
+            <th>El pastas</th>
+        </tr>
+    </table>
+    
+    <script>
+        "use strict";
+
+// 3. Susikurti objektą "Klientas".
+// Kintamieji:
+// vardas
+// pavarde
+// asmens kodas
+// prisijungimo data
+// adresas
+// elpastas.
+
+// Sukurti 200 "Klientas" objektų masyvą. "Klientas" duomenis užpildyti savo nuožiūrą.
+// Visą "Klientas" objektų masyvą atvaizduoti lentelėje <table>.
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
+    var klientuMasyvas = [];
+
+    // Klientu generavimas
+    for(var i=0; i< 200; i++) {
+        var klientas = {
+            vardas: "",
+            pavarde: "",
+            asmensKodas: "",
+            prsijungimData: "",
+            adresas: "",
+            elpastas: ""
+        }
+
+        klientas.vardas = "vardas"+(i+1);
+        klientas.pavarde = "pavarde"+(i+1);
+        // klientas.asmensKodas = "3985254515" + (i+1);
+        klientas.asmensKodas = getRndInteger(3985254515, 3999999999);
+        klientas.prsijungimData = new Date();
+        klientas.adresas = "adresas" + (i+1);
+        klientas.elpastas = "testinis"+(i+1) + "@gmail.com";
+        klientuMasyvas.push(klientas);
+    }
+
+    //Klientu atvaizdavimas
+    var isvedimoElementas = document.querySelector(".klientai");
+
+    for (var i=0; i< klientuMasyvas.length; i++) {
+        // tiesiog sukurti tuscias eilutes
+        var eilute = document.createElement("tr");
+        eilute.classList.add("klientas");
+
+        //Vardo atvaizdavimas
+        var vardas = document.createElement("td");
+        vardas.innerText = klientuMasyvas[i].vardas;
+        eilute.append(vardas);
+
+        //Pavarde atvaizdavimas
+        var pavarde = document.createElement("td");
+        pavarde.innerText = klientuMasyvas[i].pavarde;
+        eilute.append(pavarde);
+
+        //Asmens kodas atvaizdavimas
+        var asmensKodas = document.createElement("td");
+        asmensKodas.innerText = klientuMasyvas[i].asmensKodas;
+        eilute.append(asmensKodas);
+
+        //prsijungimData atvaizdavimas
+        var prsijungimData = document.createElement("td");
+        prsijungimData.innerText = klientuMasyvas[i].prsijungimData;
+        eilute.append(prsijungimData);
+
+        // Adresas atvaizdavimas
+        var adresas = document.createElement("td");
+        adresas.innerText = klientuMasyvas[i].adresas;
+        eilute.append(adresas);
+
+        // elpastas atvaizdavimas
+        var elpastas = document.createElement("td");
+        elpastas.innerText = klientuMasyvas[i].elpastas;
+        eilute.append(elpastas);
+
+        isvedimoElementas.append(eilute);
+    }
+
+
+    console.log(klientuMasyvas);
+
+    </script>
+</body>
+</html>

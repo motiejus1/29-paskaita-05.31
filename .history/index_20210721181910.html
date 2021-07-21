@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 paskaita</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+// 3. Susikurti objektą "Klientas".
+// Kintamieji:
+// vardas
+// pavarde
+// asmens kodas
+// prisijungimo data
+// adresas
+// elpastas.
+
+// Sukurti 200 "Klientas" objektų masyvą. "Klientas" duomenis užpildyti savo nuožiūrą.
+// Visą "Klientas" objektų masyvą atvaizduoti lentelėje <table>.
+
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+
+    var klientas = {
+        vardas: "",
+        pavarde: "",
+        asmensKodas: "",
+        prsijungimData: "",
+        adresas: "",
+        elpastas: ""
+    }
+
+    var klientuMasyvas = [];
+
+    for(var i=0; i< 200; i++) {
+        klientas.vardas = "vardas"+(i+1);
+        klientas.pavarde = "pavarde"+(i+1);
+        // klientas.asmensKodas = "3985254515" + (i+1);
+        klientas.asmensKodas = getRndInteger(3985254515, 3999999999);
+        klientas.prsijungimData = new Date();
+        klientas.adresas = "adresas" + (i+1);
+        klientas.elpastas = 
+
+    }
+
+    </script>
+</body>
+</html>
