@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 paskaita</title>
+</head>
+<body>
+
+    <div class="container raudonas pradink">
+        <p>Labas</p>
+    </div>
+
+    <script>
+        "use strict";
+// 4. Sukurti objektą "Elementas". Kintamieji:
+// pradzios_zyme - HTML žymės pradžios žymė. Pvz.: <div>
+// pabaigos_zyme - HTML žymės pabaigos žymė. Pvz.: </div>
+// elemento_klases - HTML žymės klasės, masyvas.
+// turinys - gali būti tekstas, skaičius, taip pat kitas HTML elementas.
+
+// Objektui sukurti paleidimo metodą, kurio metu perduodami kintamieji pradzios_zyme, pabaigos_zyme, elemento_klases, turinys,.
+// Objekte sukurti metodą, kuris perduodamą informaciją į objektą atvaizduoja dizaine.
+// Pvz.:
+// elementas.atvaizduok("<div>",["container", "raudonas"], "<p>labas</p><br>", "</div>" ) - dizaine turi būti atvaizduojamas
+// <div class="container raudonas">
+// <p>labas</p><br>
+// </div>
+
+    var elementas = {
+        pradzios_zyme: "",
+        pabaigos_zyme: "",
+        elemento_klases: "",
+        turinys: "",
+
+        paleidimas: function(pradzios_zyme, pabaigos_zyme, elemento_klases, turinys) {
+            this.pradzios_zyme = pradzios_zyme;
+            this.pabaigos_zyme = pabaigos_zyme;
+            
+        },
+
+        atvaizduok: function() {
+
+        }
+
+    };
+
+    </script>
+</body>
+</html>
